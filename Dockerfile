@@ -11,11 +11,12 @@ WORKDIR /root
 
 VOLUME /root/Documents
 
-COPY ./.spacemacs .
 COPY ./install.sh .
 
 RUN chmod +x ./install.sh
 RUN ./install.sh
 RUN rm ./install.sh
+
+COPY ./.spacemacs .
 
 ENTRYPOINT ["launch.sh"]

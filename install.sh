@@ -32,6 +32,8 @@ cd ..
 rm -rf cscope-15.8b
 rm cscope-15.8b.tar.gz
 
-git clone https://github.com/syl20bnr/spacemacs.git /root/.emacs.d
+git clone https://github.com/syl20bnr/spacemacs.git .emacs.d
+
+emacs
 
 rm /root/install.sh
