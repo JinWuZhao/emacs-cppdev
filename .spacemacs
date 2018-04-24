@@ -48,6 +48,7 @@ values."
      cscope
      markdown
      (shell :variables
+            shell-default-term-shell "/bin/bash"
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
