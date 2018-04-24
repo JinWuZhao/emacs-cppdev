@@ -11,12 +11,10 @@ WORKDIR /root
 
 VOLUME /root/Documents
 
-COPY ./install.sh .
-
-RUN chmod +x ./install.sh
-RUN ./install.sh
-RUN rm ./install.sh
-
+COPY ./install.sh /usr/local/bin/install_toolchains.sh
 COPY ./.spacemacs .
 
-ENTRYPOINT ["launch.sh"]
+RUN chmod +x /usr/local/bin/install_toolchains.sh
+RUN install_toolchains.sh
+
+ENTRYPOINT ["launch_emacs.sh"]
