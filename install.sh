@@ -22,7 +22,7 @@ cd ..
 rm -rf ncurses-6.1
 rm ncurses-6.1.tar.gz
 
-wget -c https://jaist.dl.sourceforge.net/project/cscope/cscope/15.8b/cscope-15.8b.tar.gz
+wget -c https://cytranet.dl.sourceforge.net/project/cscope/cscope/15.8b/cscope-15.8b.tar.gz
 tar -xf cscope-15.8b.tar.gz
 cd cscope-15.8b
 ./configure
