@@ -1,10 +1,12 @@
 #!/bin/sh
 
-apk --no-cache add musl-dev 
+apk --no-cache add musl-dev
 apk --no-cache add gcc
 apk --no-cache add g++
 apk --no-cache add clang
+apk --no-cache add clang-dev
 apk --no-cache add llvm
+apk --no-cache add llvm3.7-dev
 apk --no-cache add make
 apk --no-cache add cmake
 apk --no-cache add openssl
@@ -33,7 +35,19 @@ cd ..
 rm -rf cscope-15.8b
 rm cscope-15.8b.tar.gz
 
-git clone https://github.com/syl20bnr/spacemacs.git .emacs.d
+wget -c https://andersbakken.github.io/rtags-releases/rtags-2.18.tar.gz
+tar -xf rtags-2.18.tar.gz
+cd rtags-2.18
+mkdir build
+cd build
+cmake ..
+make
+make install
+cd ../../
+rm -rf rtags-2.18
+rm rtags-2.18.tar.gz
+
+git clone -b develop https://github.com/syl20bnr/spacemacs.git .emacs.d
 
 emacs --daemon
 emacsclient -e '(kill-emacs)'

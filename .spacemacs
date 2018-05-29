@@ -43,7 +43,9 @@ values."
      git
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+            c-c++-enable-clang-support t
+            c-c++-enable-clang-format-on-save t
+            c-c++-enable-rtags-support t)
      semantic
      cscope
      markdown
