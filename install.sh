@@ -9,6 +9,7 @@ apk --no-cache add make
 apk --no-cache add cmake
 apk --no-cache add openssl
 apk --no-cache add findutils
+apk --no-cache add linux-headers
 
 cd /root/
 
